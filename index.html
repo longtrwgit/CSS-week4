@@ -5,66 +5,62 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Colors</title>
-  <!-- Đã sửa lại đường dẫn liên kết file CSS để cùng nằm trong một thư mục -->
+  <title>Final Project</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <h1 id="top">Colors!</h1>
+    <h1 id="top">Thư viện Sắc màu Cuộc sống</h1>
   </header>
 
   <main>
-    <h2>Basic Media Queries</h2>
-    <p>In this assignment you will add two media queries to the css file.</p>
-    <ul>
-      <li>The first media query should trigger at 772px and change the layout of the divs to be 45% of the viewport width. The images should have a maximum height of 30% of the viewport height.</li>
-      <li>The second media query should trigger at 998px and change the layout of the divs to be 30% of the viewport width.</li>
-    </ul>
-    <p>You will need to make additional changes to ensure that the divs appear next to each other and that the images are contained within the divs.  Some of these properties include display, width and max-height.</p>
-
-    <div>
-      <img src="images/Red.jpeg" alt="Red" width="200">
-      <p class="label">Red</p>
+    <p>Trang web này giới thiệu bộ sưu tập màu sắc yêu thích với các hình ảnh trực quan và sinh động. Bạn có thể khám phá sự thay đổi phong phú của từng gam màu sắc nét được trưng bày dưới đây.</p>
+    
+    <p>Hệ thống bố cục của trang web sẽ tự động co giãn và sắp xếp lại linh hoạt tùy theo kích thước màn hình thiết bị của bạn, mang lại trải nghiệm xem hoàn hảo nhất từ điện thoại cho đến máy tính bàn.</p>
+      
+    <div class="grid">
+        <figure>
+        <img src="images/Red.jpeg" alt="Red">
+        <figcaption class="label">Đỏ rực rỡ</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Orange.png" alt="Orange">
+        <figcaption class="label">Cam ấm áp</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Yellow.png" alt="Yellow">
+        <figcaption class="label">Vàng tươi tắn</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Green.png" alt="Green">
+        <figcaption class="label">Xanh lá thiên nhiên</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Blue.png" alt="Blue">
+        <figcaption class="label">Xanh dương đại dương</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Indigo.jpeg" alt="Indigo">
+        <figcaption class="label">Xanh chàm huyền ảo</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Purple.png" alt="Purple">
+        <figcaption class="label">Tím mộng mơ</figcaption>
+        </figure>
+        <figure>
+        <img src="images/Pink.jpeg" alt="Pink">
+        <figcaption class="label">Hồng ngọt ngào</figcaption>
+        </figure>
+        <figure>
+        <img src="images/White.png" alt="White">
+        <figcaption class="label">Trắng tinh khôi</figcaption>
+        </figure>
     </div>
-    <div>
-      <img src="images/Orange.png" alt="Orange" width="200">
-      <p class="label">Orange</p>
-    </div>
-    <div>
-      <img src="images/Yellow.png" alt="Yellow" width="200">
-      <p class="label">Yellow</p>
-    </div>
-    <div>
-      <img src="images/Green.png" alt="Green" width="200">
-      <p class="label">Green</p>
-    </div>
-    <div>
-      <img src="images/Blue.png" alt="Blue" width="200">
-      <p class="label">Blue</p>
-    </div>
-    <div>
-      <img src="images/Indigo.jpeg" alt="Indigo" width="200">
-      <p class="label">Indigo</p>
-    </div>
-    <div>
-      <img src="images/Purple.png" alt="Purple" width="200">
-      <p class="label">Purple</p>
-    </div>
-    <div>
-      <img src="images/Pink.jpeg" alt="Pink" width="200">
-      <p class="label">Pink</p>
-    </div>
-    <div>
-      <img src="images/White.png" alt="White" width="200">
-      <p class="label">White</p>
-    </div>
-    <!-- Đã xóa thẻ </div> thừa ở đây để tránh lỗi cấu trúc web -->
   </main>
 
   <footer>
-    <a href="#top">Jump to the Top</a>
+    <a href="#top">Quay lại đầu trang</a>
   </footer>
 </body>
 

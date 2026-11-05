@@ -1,56 +1,109 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
     text-align: center;
     font-family: Arial, sans-serif;
-    font-size: 32px;
+    font-size: 1.95em;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+img {
+    border: 5px solid blue;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.label {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+/* Bố cục mặc định (Điện thoại nhỏ): Hiển thị dạng cột dọc */
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+figure {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0;
+}
+
+/* --- TRUY VẤN PHƯƠNG TIỆN 1 (Từ 500px trở lên): Chuyển thành 2 cột --- */
+@media screen and (min-width: 500px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* --- TRUY VẤN PHƯƠNG TIỆN 2 (Từ 768px trở lên): Chuyển thành 3 cột --- */
+@media screen and (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- TRUY VẤN PHƯƠNG TIỆN 3 (Từ 1024px trở lên): Tinh chỉnh độ rộng và căn giữa --- */
+@media screen and (min-width: 1024px) {
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* --- TRUY VẤN PHƯƠNG TIỆN 4 (Từ 1200px trở lên): Hiển thị không gian lớn cho desktop --- */
+@media screen and (min-width: 1200px) {
+    .grid {
+        gap: 30px;
+    }
+    img {
+        border-width: 6px;
+    }
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0;
 }
 
 a {
     color: #000;
     text-decoration: none;
     font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #ccc;
+    border-radius: 5px;
 }
 
-/* Đã gộp 2 thẻ p cũ lại cho gọn gàng */
-p {
-    font-size: 25px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
-/* --- THIẾT LẬP MẶC ĐỊNH (CHO MÀN HÌNH ĐIỆN THOẠI) --- */
-div {
-    display: inline-block;
-    width: 90%; /* Chiếm phần lớn màn hình trên điện thoại */
-    margin: 5px;
-    padding: 2px;
-    vertical-align: top; /* Căn chỉnh các khối ngang hàng với nhau */
-}
-
-div img {
-    width: 100%; /* Hình ảnh tự động co giãn vừa với thẻ div chứa nó */
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-/* --- BƯỚC 5: TRUY VẤN PHƯƠNG TIỆN 1 (CHO MÁY TÍNH BẢNG) --- */
-@media screen and (min-width: 772px) {
-    div {
-        width: 45vw; /* Chiều rộng div đổi thành 45% viewport */
-    }
-    div img {
-        max-height: 30vh; /* Chiều cao tối đa của ảnh là 30% viewport */
-        object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
-    }
-}
-
-/* --- BƯỚC 7: TRUY VẤN PHƯƠNG TIỆN 2 (CHO MÁY TÍNH BÀN) --- */
-@media screen and (min-width: 998px) {
-    div {
-        width: 30vw; /* Chiều rộng div thu lại còn 30% viewport */
-    }
+a:hover {
+    background-color: #bbb;
 }

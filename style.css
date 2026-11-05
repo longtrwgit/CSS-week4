@@ -1,0 +1,56 @@
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+/* Đã gộp 2 thẻ p cũ lại cho gọn gàng */
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* --- THIẾT LẬP MẶC ĐỊNH (CHO MÀN HÌNH ĐIỆN THOẠI) --- */
+div {
+    display: inline-block;
+    width: 90%; /* Chiếm phần lớn màn hình trên điện thoại */
+    margin: 5px;
+    padding: 2px;
+    vertical-align: top; /* Căn chỉnh các khối ngang hàng với nhau */
+}
+
+div img {
+    width: 100%; /* Hình ảnh tự động co giãn vừa với thẻ div chứa nó */
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* --- BƯỚC 5: TRUY VẤN PHƯƠNG TIỆN 1 (CHO MÁY TÍNH BẢNG) --- */
+@media screen and (min-width: 772px) {
+    div {
+        width: 45vw; /* Chiều rộng div đổi thành 45% viewport */
+    }
+    div img {
+        max-height: 30vh; /* Chiều cao tối đa của ảnh là 30% viewport */
+        object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
+    }
+}
+
+/* --- BƯỚC 7: TRUY VẤN PHƯƠNG TIỆN 2 (CHO MÁY TÍNH BÀN) --- */
+@media screen and (min-width: 998px) {
+    div {
+        width: 30vw; /* Chiều rộng div thu lại còn 30% viewport */
+    }
+}
